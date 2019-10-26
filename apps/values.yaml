@@ -4,18 +4,18 @@ project: default
 requestor: admin@nikio.io
 applications:
   - name: apps
-      namespace: argocd
-      noNamespaceCreation: true
-      helm:
-        valueFiles:
-          - "values.yaml"
-      path: apps
-      repoURL: https://github.com/baloise-incubator/cluster-config.git
-      targetRevision: HEAD
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
+    namespace: argocd
+    noNamespaceCreation: true
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: apps
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
   - name: argocd
     namespace: argocd
     path: argocd
