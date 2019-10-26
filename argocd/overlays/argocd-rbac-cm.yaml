@@ -10,8 +10,7 @@ data:
     p, role:org-admin, projects, *, *, allow
     p, role:org-admin, roles, *, *, allow
     p, role:org-admin, repositories, *, *, allow
-    g, nikolas.philips@gmail.com, role:org-admin
-    g, joachim.prinzbach@gmail.com, role:org-admin
+    g, baloise-incubator:argocd-administrators, role:org-admin
 
     p, role:baloise-incubator, applications, get, baloise-incubator/*, allow
     p, role:baloise-incubator, applications, sync, baloise-incubator/*, allow
