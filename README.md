@@ -45,4 +45,8 @@ syncPolicy:
     selfHeal: true
 ```
 
+## Faster sync with webhook
+
+For faster synchronization you should add a webhook to your git repository. See the [docs](https://argoproj.github.io/argo-cd/operator-manual/webhook/) for an example.
+
 
