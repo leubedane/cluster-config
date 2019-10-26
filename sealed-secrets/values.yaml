@@ -38,4 +38,4 @@ networkPolicy: false
 
 securityContext:
   # User under which the container is running
-  runAsUser: 1000210000
+  runAsUser: 1000200000
