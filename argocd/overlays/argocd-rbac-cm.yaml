@@ -10,7 +10,8 @@ data:
     p, role:org-admin, roles, *, *, allow
     p, role:org-admin, repositories, *, *, allow
     p, role:org-admin, repositories, *, *, allow
-    g, baloise-incubator:argocd-administrators, role:org-admin
+    g, nikolas.philips@gmail.com, role:org-admin
+    g, joachim.prinzbach@gmail.com, role:org-admin
 
     p, role:baloise-incubator, applications, get, baloise-incubator/*, allow
     p, role:baloise-incubator, applications, sync, baloise-incubator/*, allow
@@ -26,5 +27,4 @@ data:
     p, role:readonly, projects, get, *, allow
 
   policy.default: 'role:readonly'
-  scopes: '[cognito:groups, email]'
 
