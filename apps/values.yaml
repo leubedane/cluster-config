@@ -15,6 +15,7 @@ applications:
       syncPolicy:
         automated:
           prune: true
+          selfHeal: true
   - name: argocd
     namespace: argocd
     path: argocd
@@ -23,6 +24,7 @@ applications:
     syncPolicy:
       automated:
         prune: true
+        selfHeal: true
   - name: sealed-secrets
     helm:
       valueFiles:
@@ -33,3 +35,4 @@ applications:
     syncPolicy:
       automated:
         prune: true
+        selfHeal: true
