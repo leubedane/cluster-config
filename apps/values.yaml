@@ -3,3 +3,33 @@ server: https://kubernetes.default.svc
 project: default
 requestor: admin@nikio.io
 applications:
+  - name: apps
+      namespace: argocd
+      noNamespaceCreation: true
+      helm:
+        valueFiles:
+          - "values.yaml"
+      path: apps
+      repoURL: https://github.com/baloise-incubator/cluster-config.git
+      targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+  - name: argocd
+    namespace: argocd
+    path: argocd
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+  - name: sealed-secrets
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: sealed-secrets
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
