@@ -17,7 +17,7 @@ data:
     p, role:baloise-incubator, projects, get, baloise-incubator, allow
     p, role:baloise-incubator, clusters, get, *, allow
     p, role:baloise-incubator, repositories, get, *, allow
-    g, baloise-incubator:, role:baloise-incubator
+    g, baloise-incubator:, role:org-admin
 
     p, role:readonly, applications, get, */*, allow
     p, role:readonly, certificates, get, *, allow
