@@ -21,6 +21,6 @@ data:
     p, role:baloise-incubator, repositories, get, *, allow
     g, baloise-incubator:, role:baloise-incubator
 
-  policy.default: 'role:baloise-incubator'
+  policy.default: 'role:readonly'
   scopes: '[cognito:groups, email]'
 
