@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: argocd-rbac-cm
 data:
+  policy.default: 'role:readonly'
   policy.csv: |
     p, role:org-admin, applications, *, */*, allow
     p, role:org-admin, clusters, *, *, allow
@@ -25,5 +26,4 @@ data:
     p, role:readonly, repositories, get, *, allow
     p, role:readonly, projects, get, *, allow
 
-  policy.default: 'role:readonly'
 
