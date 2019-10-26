@@ -63,5 +63,5 @@ data:
           orgs:
           - name: baloise-incubator
   url: https://argocd.baloise.dev
-  users.anonymous.enabled: 'false'
+  users.anonymous.enabled: 'true'
   statusbadge.enabled: 'true'
