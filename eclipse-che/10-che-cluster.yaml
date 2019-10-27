@@ -4,7 +4,7 @@ metadata:
   name: eclipse-che
 spec:
   server:
-    cheHost: che.apps.wheel.sh
+    cheHost: che.apps.baloise.dev
     # server image used in Che deployment
     #cheImage: ''
     # tag of an image used in Che deployment
