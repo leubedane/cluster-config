@@ -5,7 +5,7 @@
 ### With old JX Install: 
 
 ```shell script
-jx install --provider openshift --static-jenkins --skip-ingress --exposer=Route --domain=apps.baloise.dev
+jx install --advanced-mode=true --exposer=Route --provider=openshift --skip-ingress=true --domain=apps.baloise.dev
 ```
 
 https://jenkins-x.io/docs/managing-jx/old/manage-via-gitops/
