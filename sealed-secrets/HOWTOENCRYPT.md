@@ -29,7 +29,7 @@ kubeseal --cert ~/kubeseal/kubeseal.crt \
 ## Create and encrypt pull secret
 ```
 kubectl create secret docker-registry harbor-pull-secret \
---docker-server=harbor.cloud.wheel.sh \
+--docker-server=harbor.apps.baloise.dev \
 --docker-username=admin \
 --docker-password=Harbor12345 \
 --dry-run -o json > pull-secret-example.json
