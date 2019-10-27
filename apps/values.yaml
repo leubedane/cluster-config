@@ -36,3 +36,11 @@ applications:
       automated:
         prune: true
         selfHeal: true
+  - name: rook-ceph
+    path: rook-ceph
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
