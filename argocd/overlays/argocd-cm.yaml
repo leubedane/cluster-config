@@ -62,6 +62,7 @@ data:
           clientSecret: $dex.github.clientSecret
           orgs:
           - name: baloise-incubator
+          teamNameField: slug
   url: https://argocd.baloise.dev
   users.anonymous.enabled: 'true'
   statusbadge.enabled: 'true'

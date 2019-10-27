@@ -7,8 +7,6 @@ data:
   scopes: '[cognito:groups, email]'
   policy.csv: |
     g, baloise-incubator:argocd-administrators, role:admin
-    g, nikolas.philips@gmail.com, role:admin
-    g, joachim.prinzbach@gmail.com, role:admin
 
     p, role:baloise-incubator, applications, sync, baloise-incubator/*, allow
     g, baloise-incubator:, role:baloise-incubator
