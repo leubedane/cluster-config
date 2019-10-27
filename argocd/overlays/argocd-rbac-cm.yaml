@@ -6,19 +6,28 @@ data:
   policy.default: 'role:readonly'
   scopes: '[cognito:groups, email]'
   policy.csv: |
-    p, role:org-admin, applications, *, */*, allow
-    p, role:org-admin, clusters, *, *, allow
-    p, role:org-admin, projects, *, *, allow
-    p, role:org-admin, roles, *, *, allow
-    p, role:org-admin, repositories, *, *, allow
-    g, baloise-incubator:argocd-administrators, role:org-admin
+    p, role:admin, applications, create, */*, allow
+    p, role:admin, applications, update, */*, allow
+    p, role:admin, applications, delete, */*, allow
+    p, role:admin, applications, sync, */*, allow
+    p, role:admin, applications, override, */*, allow
+    p, role:admin, applications, action/*, */*, allow
+    p, role:admin, certificates, create, *, allow
+    p, role:admin, certificates, update, *, allow
+    p, role:admin, certificates, delete, *, allow
+    p, role:admin, clusters, create, *, allow
+    p, role:admin, clusters, update, *, allow
+    p, role:admin, clusters, delete, *, allow
+    p, role:admin, repositories, create, *, allow
+    p, role:admin, repositories, update, *, allow
+    p, role:admin, repositories, delete, *, allow
+    p, role:admin, projects, create, *, allow
+    p, role:admin, projects, update, *, allow
+    p, role:admin, projects, delete, *, allow
+    g, baloise-incubator:argocd-administrators, role:admin
 
-    p, role:baloise-incubator, applications, get, baloise-incubator/*, allow
     p, role:baloise-incubator, applications, sync, baloise-incubator/*, allow
-    p, role:baloise-incubator, projects, get, baloise-incubator, allow
-    p, role:baloise-incubator, clusters, get, *, allow
-    p, role:baloise-incubator, repositories, get, *, allow
-    g, baloise-incubator:, role:org-admin
+    g, baloise-incubator:, role:baloise-incubator
 
     p, role:readonly, applications, get, */*, allow
     p, role:readonly, certificates, get, *, allow
