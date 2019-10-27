@@ -18,6 +18,8 @@ https://jenkins-x.io/docs/managing-jx/old/install-on-cluster/
 
 Checkout the [boot repository](https://github.com/baloise-incubator/jenkins-x-boot-config) and cd into it.
 
+Possible adjustments needed: https://github.com/jenkins-x/jenkins-x-boot-config/compare/master...Mentor-Medier:master
+
 Run: 
 
 ```shell script
