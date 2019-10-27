@@ -46,7 +46,7 @@ applications:
         selfHeal: true
   - name: eclipse-che
     path: eclipse-che
-    repoURL: https://github.com/niiku/wheel-cluster-config.git
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
     targetRevision: HEAD
     syncPolicy:
       automated:
@@ -56,7 +56,7 @@ applications:
       valueFiles:
         - "values.yaml"
     path: strimzi
-    repoURL: https://github.com/niiku/wheel-cluster-config.git
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
     targetRevision: HEAD
     syncPolicy:
       automated:
