@@ -6,35 +6,11 @@ data:
   policy.default: 'role:readonly'
   scopes: '[cognito:groups, email]'
   policy.csv: |
-    p, role:admin, applications, create, */*, allow
-    p, role:admin, applications, update, */*, allow
-    p, role:admin, applications, delete, */*, allow
-    p, role:admin, applications, sync, */*, allow
-    p, role:admin, applications, override, */*, allow
-    p, role:admin, applications, action/*, */*, allow
-    p, role:admin, certificates, create, *, allow
-    p, role:admin, certificates, update, *, allow
-    p, role:admin, certificates, delete, *, allow
-    p, role:admin, clusters, create, *, allow
-    p, role:admin, clusters, update, *, allow
-    p, role:admin, clusters, delete, *, allow
-    p, role:admin, repositories, create, *, allow
-    p, role:admin, repositories, update, *, allow
-    p, role:admin, repositories, delete, *, allow
-    p, role:admin, projects, create, *, allow
-    p, role:admin, projects, update, *, allow
-    p, role:admin, projects, delete, *, allow
     g, baloise-incubator:argocd-administrators, role:admin
-    g, joachim.prinzbach@baloise.ch, role:admin
+    g, nikolas.philips@gmail.com, role:admin
     g, joachim.prinzbach@gmail.com, role:admin
 
     p, role:baloise-incubator, applications, sync, baloise-incubator/*, allow
     g, baloise-incubator:, role:baloise-incubator
-
-    p, role:readonly, applications, get, */*, allow
-    p, role:readonly, certificates, get, *, allow
-    p, role:readonly, clusters, get, *, allow
-    p, role:readonly, repositories, get, *, allow
-    p, role:readonly, projects, get, *, allow
 
 
