@@ -10,6 +10,9 @@ Currently the following apps are available:
 - [Argo CD](argocd)
 - [Rook Ceph](rook-ceph)
 - [Sealed Secrets](sealed-secrets)
+- [Jenkins X](jenkins-x)
+- [Eclipse CHE](eclipse-che)
+- [Strimzi](strimzi)
 
 ### Adding a new app
 Every app needs to be referenced in the [values.yaml in the apps folder](apps/values.yaml).
