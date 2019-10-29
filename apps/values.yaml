@@ -61,3 +61,13 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: katafygio
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: katafygio
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
