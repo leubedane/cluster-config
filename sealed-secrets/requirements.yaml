@@ -1,0 +1,5 @@
+dependencies:
+- name:  sealed-secrets
+  version: 1.4.3
+  appVersion: 0.9.1
+  repository: https://kubernetes-charts.storage.googleapis.com/

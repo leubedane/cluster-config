@@ -1,5 +1,7 @@
 # cluster-config
 
+[![App Status](https://argocd.wheel.sh/api/badge?name=apps)](https://argocd.baloise.dev/applications/apps)
+
 This repository contains the configuration-as-code for [Argo CD](https://argoproj.github.io/argo-cd/) and all the apps managed by it.
 
 
