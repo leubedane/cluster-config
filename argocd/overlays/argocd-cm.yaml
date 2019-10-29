@@ -32,6 +32,8 @@ data:
       name: bitnami
     - url: https://charts.rook.io/release
       name: rook-release
+    - url: https://helm.github.io/monocular
+      name: monocular
   repositories: |
     - url: https://github.com/baloise-incubator/cluster-config.git
   resource.customizations: |
