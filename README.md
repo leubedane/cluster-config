@@ -9,6 +9,7 @@ This repository contains the configuration-as-code for [Argo CD](https://argopro
 Every application has its own subfolder where the configuration is located. See the README.md files for a short explanation in every subfolder.
 
 The following deployments are currently in the cluster, managed by ArgoCD:
+
 | App Name          | Folder                         | Sync Status                         |
 | ----------------- | ------------------------------ | ------------------------------------| 
 | Argo CD           |[argocd](argocd)                |[![App Status](https://argocd.baloise.dev/api/badge?name=argocd)](https://argocd.baloise.dev/applications/argocd)                 |
