@@ -18,13 +18,13 @@ allowPrivilegedContainer: true
 allowHostNetwork: true
 allowHostDirVolumePlugin: true
 priority:
-allowedCapabilities: []
+# allowedCapabilities: []
 allowHostPorts: true
 allowHostPID: true
 allowHostIPC: true
 readOnlyRootFilesystem: false
-requiredDropCapabilities: []
-defaultAddCapabilities: []
+# requiredDropCapabilities: []
+# defaultAddCapabilities: []
 runAsUser:
   type: RunAsAny
 seLinuxContext:
