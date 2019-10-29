@@ -14,7 +14,7 @@ The following deployments are currently in the cluster, managed by ArgoCD:
 | Argo CD           |[argocd](argocd)                |[![App Status](https://argocd.baloise.dev/api/badge?name=argocd)](https://argocd.baloise.dev/applications/argocd)                 |
 | Rook Ceph         |[Rook Ceph](rook-ceph)          |[![App Status](https://argocd.baloise.dev/api/badge?name=rook-ceph)](https://argocd.baloise.dev/applications/rook-ceph)           |
 | Sealed Secrets    |[Sealed Secrets](sealed-secrets)|[![App Status](https://argocd.baloise.dev/api/badge?name=sealed-secrets)](https://argocd.baloise.dev/applications/sealed-secrets) |
-| Jenkins X         |[Jenkins X](jenkins-x)          |- |                                  |
+| Jenkins X         |[Jenkins X](jenkins-x)          |- |                                  
 | Eclipse CHE       |[Eclipse CHE](eclipse-che)      |[![App Status](https://argocd.baloise.dev/api/badge?name=eclipse-che)](https://argocd.baloise.dev/applications/eclipse-che)|
 | Strimzi Kafka Op  |[Strimzi](strimzi)              |[![App Status](https://argocd.baloise.dev/api/badge?name=strimzi)](https://argocd.baloise.dev/applications/strimzi)|
 | Chartmuseum       |[Chartmuseum](chartmuseum)      |[![App Status](https://argocd.baloise.dev/api/badge?name=chartmuseum)](https://argocd.baloise.dev/applications/chartmuseum)|
