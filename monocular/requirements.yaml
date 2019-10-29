@@ -1,5 +1,4 @@
 dependencies:
-- name: mongodb
-  version: 7.2.10
+- name: monocolar
+  version: 1.4.13
   repository: https://kubernetes-charts.storage.googleapis.com
-  condition: mongodb.enabled
