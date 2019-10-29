@@ -15,6 +15,9 @@ The following deployments are currently in the cluster, managed by ArgoCD:
 - [Jenkins X](jenkins-x)
 - [Eclipse CHE](eclipse-che)
 - [Strimzi](strimzi)
+- [Chartmuseum](chartmuseum)
+- [Monocular](monocular)
+- [Katafygio](katafygio)
 
 ### Adding a new app
 Every app needs to be referenced in the [values.yaml in the apps folder](apps/values.yaml).
