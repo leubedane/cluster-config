@@ -12,6 +12,8 @@ kind: SecurityContextConstraints
 apiVersion: security.openshift.io/v1
 metadata:
   name: rook-ceph
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
 allowPrivilegedContainer: true
 allowHostNetwork: true
 allowHostDirVolumePlugin: true
