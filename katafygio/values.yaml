@@ -5,7 +5,7 @@
 # gitUrl (optional) is a remote git repository that Katafygio can clone, and where
 # it can push changes. If gitUrl is not defined, Katafygio will still maintain a
 # pod-local git repository, which can be on a persistent volume (see above).
-# gitUrl: https://user:token@github.com/myorg/myrepos.git
+gitUrl: https://user:token@github.com/myorg/myrepos.git
 
 # noGit disable git versioning when true (will only keep an unversioned local dump up-to-date).
 noGit: false

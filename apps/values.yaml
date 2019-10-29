@@ -71,3 +71,23 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: monocular
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: monocular
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+  - name: chartmuseum
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: chartmuseum
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
