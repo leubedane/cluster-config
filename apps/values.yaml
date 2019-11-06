@@ -92,3 +92,10 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: openshift-acme
+    path: openshift-acme
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
