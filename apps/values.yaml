@@ -38,6 +38,7 @@ applications:
         selfHeal: true
   - name: rook-ceph
     path: rook-ceph
+    nodeSelector: ""
     repoURL: https://github.com/baloise-incubator/cluster-config.git
     targetRevision: HEAD
     syncPolicy:

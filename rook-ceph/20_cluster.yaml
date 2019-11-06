@@ -51,7 +51,16 @@ spec:
   # To control where various services will be scheduled by kubernetes, use the placement configuration sections below.
   # The example under 'all' would have all services scheduled on kubernetes nodes labeled with 'role=storage-node' and
   # tolerate taints with a key of 'storage-node'.
-#  placement:
+  placement:
+    mon:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: node-role.kubernetes.io/master
+                  operator: In
+                  values:
+                    - 'true'
 #    all:
 #      nodeAffinity:
 #        requiredDuringSchedulingIgnoredDuringExecution:
@@ -67,27 +76,38 @@ spec:
 #      - key: storage-node
 #        operator: Exists
 # The above placement information can also be specified for mon, osd, and mgr components
-#    mon:
-#    osd:
-#    mgr:
+
+    osd:
+    mgr:
   #annotations:
 #    all:
 #    mon:
 #    osd:
 # If no mgr annotations are set, prometheus scrape annotations will be set by default.
 #   mgr:
-  #resources:
-# The requests and limits set here, allow the mgr pod to use half of one CPU core and 1 gigabyte of memory
-#    mgr:
-#      limits:
-#        cpu: "500m"
-#        memory: "1024Mi"
-#      requests:
-#        cpu: "500m"
-#        memory: "1024Mi"
-# The above example requests/limits can also be added to the mon and osd components
-#    mon:
-#    osd:
+  resources:
+    mgr:
+      requests:
+        cpu: 50m
+        memory: 512Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+    mon:
+      requests:
+        cpu: 50m
+        memory: 1Gi
+      limits:
+        cpu: 500m
+        memory: 1Gi
+    osd:
+      requests:
+        cpu: 250m
+        memory: 2Gi
+      limits:
+        cpu: 1
+        memory: 2Gi
+
   storage: # cluster level storage configuration and selection
    #useAllNodes: false
     useAllDevices: false
