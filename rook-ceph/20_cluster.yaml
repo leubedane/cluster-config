@@ -76,10 +76,7 @@ spec:
 #      - key: storage-node
 #        operator: Exists
 # The above placement information can also be specified for mon, osd, and mgr components
-
-    osd:
-    mgr:
-  #annotations:
+#c  #annotations:
 #    all:
 #    mon:
 #    osd:
