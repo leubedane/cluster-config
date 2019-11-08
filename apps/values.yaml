@@ -99,3 +99,13 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: tournamentregistration
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: tournament-registration
+    repoURL: https://github.com/leubedane/registration-deployment.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
