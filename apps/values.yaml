@@ -99,7 +99,7 @@ applications:
     syncPolicy:
       automated:
         prune: true
-  - name: tournamentregistration
+  - name: tournament-registration
     helm:
       valueFiles:
         - "values.yaml"
