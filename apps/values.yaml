@@ -96,7 +96,6 @@ applications:
       automated:
         prune: true
   - name: guacamole
-    enabled: false
     helm:
       valueFiles:
         - "values.yaml"
