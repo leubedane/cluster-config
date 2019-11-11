@@ -31,6 +31,11 @@ spec:
   # set the amount of mons to be started
   mon:
     count: 3
+  mgr:
+    modules:
+    - name: pg_autoscaler
+      enabled: true
+  
     #allowMultiplePerNode: false
   # enable the ceph dashboard for viewing cluster status
   dashboard:
