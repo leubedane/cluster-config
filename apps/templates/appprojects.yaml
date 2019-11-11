@@ -19,3 +19,6 @@ metadata:
 spec:
   sourceRepos:
   - https://github.com/niiku/deployment-config.git
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc  

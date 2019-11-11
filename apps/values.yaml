@@ -125,3 +125,11 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: niiku-docs
+    project: niiku
+    path: niiku-docs
+    repoURL: https://github.com/niiku/deployment-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
