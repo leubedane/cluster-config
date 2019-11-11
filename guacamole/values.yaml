@@ -1,0 +1,20 @@
+mysql:
+  securityContext:
+    enabled: true
+    fsGroup: 1002260000
+    runAsUser: 1002260000
+  root:
+    existingSecret: guacamole-mysql
+  db:
+    user: guacamole
+    name: guacamole
+  replication:
+    enabled: false
+  master:    
+    persistence:
+      size: 1Gi
+      storageClass: "rook-ceph-block"
+    readinessProbe:
+      initialDelaySeconds: 120
+    livenessProbe:
+      initialDelaySeconds: 180
