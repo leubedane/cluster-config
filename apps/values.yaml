@@ -103,6 +103,7 @@ applications:
       automated:
         prune: true
   - name: tournament-registration
+    project: leubedane
     helm:
       valueFiles:
         - "values.yaml"

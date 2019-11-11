@@ -10,7 +10,11 @@ spec:
   destination:
     namespace: {{ default .name .namespace }}
     server: {{ $.Values.server }}
+{{ if .project }}
+  project: {{ .project }}
+{{- else }}
   project: {{ $.Values.project }}
+{{- end }}
   {{- if .ignoreDifferences }}
   ignoreDifferences:
   {{- toYaml .ignoreDifferences | nindent 4 }}
