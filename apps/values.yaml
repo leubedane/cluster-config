@@ -63,6 +63,7 @@ applications:
       automated:
         prune: true
   - name: katafygio
+    enabled: false
     helm:
       valueFiles:
         - "values.yaml"
@@ -73,6 +74,7 @@ applications:
       automated:
         prune: true
   - name: monocular
+    enabled: false
     helm:
       valueFiles:
         - "values.yaml"
@@ -83,6 +85,7 @@ applications:
       automated:
         prune: true
   - name: chartmuseum
+    enabled: false
     helm:
       valueFiles:
         - "values.yaml"
