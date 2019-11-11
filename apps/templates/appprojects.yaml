@@ -7,3 +7,12 @@ metadata:
 spec:
   sourceRepos:
   - https://github.com/leubedane/registration-deployment.git
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: niiku
+  namespace: argocd
+spec:
+  sourceRepos:
+  - https://github.com/niiku/deployment-config.git
