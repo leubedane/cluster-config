@@ -15,17 +15,21 @@ metadata:
     openshift.io/node-selector: {{ $nodeSelector | quote }}
   name: {{ default .name .namespace | quote }}
 {{- end }}
-{{- if .admins -}}
+{{- if .admins }}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: admin
+  namespace: {{ default .name .namespace | quote }}
 roleRef:
   name: admin
+  kind: Role
+  apiGroup: rbac.authorization.k8s.io
 subjects:
 {{- range .admins }}
 - kind: User
+  apiGroup: rbac.authorization.k8s.io
   name: {{ . }}
 {{ end }}
 {{ end }}
