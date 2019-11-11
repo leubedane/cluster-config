@@ -21,6 +21,7 @@ The following deployments are currently in the cluster, managed by ArgoCD:
 | Chartmuseum       |[Chartmuseum](chartmuseum)      |[![App Status](https://argocd.baloise.dev/api/badge?name=chartmuseum)](https://argocd.baloise.dev/applications/chartmuseum)|
 | Monocular         |[Monocular](monocular)          |[![App Status](https://argocd.baloise.dev/api/badge?name=monocular)](https://argocd.baloise.dev/applications/monocular)|
 | Katafygio         |[Katafygio](katafygio)          |[![App Status](https://argocd.baloise.dev/api/badge?name=katafygio)](https://argocd.baloise.dev/applications/katafygio)|
+| Guacamole         |[Guacamole](guacamole)          |[![App Status](https://argocd.baloise.dev/api/badge?name=guacamole)](https://argocd.baloise.dev/applications/guacamole)|
   
 ### Adding a new app
 Every app needs to be referenced in the [values.yaml in the apps folder](apps/values.yaml).
