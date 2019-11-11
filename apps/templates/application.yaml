@@ -13,7 +13,7 @@ spec:
 {{ if .project }}
   project: {{ .project }}
 {{- else }}
-  project: {{ $.Values.project }}
+  project: {{ $.Values.defaultProject }}
 {{- end }}
   {{- if .ignoreDifferences }}
   ignoreDifferences:

@@ -1,7 +1,7 @@
 argocdNamespace: argocd
 server: https://kubernetes.default.svc
-project: default
-requestor: admin@nikio.io
+defaultProject: default
+requestor: admin@baloise.dev
 applications:
   - name: apps
     namespace: argocd
@@ -104,6 +104,8 @@ applications:
         prune: true
   - name: tournament-registration
     project: leubedane
+    admins:
+      - leubedane
     helm:
       valueFiles:
         - "values.yaml"
