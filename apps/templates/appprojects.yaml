@@ -7,6 +7,9 @@ metadata:
 spec:
   sourceRepos:
   - https://github.com/leubedane/registration-deployment.git
+  destinations:
+  - namespace: tournament-registration
+    server: https://kubernetes.default.svc  
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
