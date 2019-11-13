@@ -20,6 +20,7 @@ applications:
     namespace: argocd
     path: argocd
     repoURL: https://github.com/baloise-incubator/cluster-config.git
+    nodeSelector: ""    
     targetRevision: HEAD
     syncPolicy:
       automated:
