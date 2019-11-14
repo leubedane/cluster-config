@@ -1,6 +1,9 @@
 dependencies:
-- name: harbor
-  repository: https://charts.bitnami.com
-  version: 3.0.2
-digest: sha256:a7d8ae42ce958efc0e65f188863b938d0fa2e941ac252aa9a9767a9af42ae5a9
-generated: "2019-11-14T19:43:47.1556961+01:00"
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 7.1.0
+- name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 9.5.4
+digest: sha256:5fdd20635c94b258d24a4d774e33d66e0b44006191d37e68ca6ad3fdcadecb14
+generated: "2019-11-14T20:41:42.3140549+01:00"

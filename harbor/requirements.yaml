@@ -1,5 +1,9 @@
 dependencies:
-- name: harbor
-  version: 3.0.2
-  repository: https://charts.bitnami.com
- 
+- name: postgresql
+  version: 7.x.x
+  repository: https://charts.bitnami.com/bitnami
+  condition: postgresql.enabled
+- name: redis
+  version: 9.x.x
+  repository: https://charts.bitnami.com/bitnami
+  condition: redis.enabled
