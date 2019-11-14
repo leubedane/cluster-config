@@ -18,7 +18,7 @@ The following deployments are currently in the cluster, managed by ArgoCD:
 | Jenkins X         |[Jenkins X](jenkins-x)          |- |                                  
 | Eclipse CHE       |[Eclipse CHE](eclipse-che)      |[![App Status](https://argocd.baloise.dev/api/badge?name=eclipse-che)](https://argocd.baloise.dev/applications/eclipse-che)|
 | Strimzi Kafka Op  |[Strimzi](strimzi)              |[![App Status](https://argocd.baloise.dev/api/badge?name=strimzi)](https://argocd.baloise.dev/applications/strimzi)|
-| Chartmuseum       |[Chartmuseum](chartmuseum)      |[![App Status](https://argocd.baloise.dev/api/badge?name=chartmuseum)](https://argocd.baloise.dev/applications/chartmuseum)|
+| Harbor            |[Harbor](harbor)                |[![App Status](https://argocd.baloise.dev/api/badge?name=harbor)](https://argocd.baloise.dev/applications/harbor)|
 | Monocular         |[Monocular](monocular)          |[![App Status](https://argocd.baloise.dev/api/badge?name=monocular)](https://argocd.baloise.dev/applications/monocular)|
 | Katafygio         |[Katafygio](katafygio)          |[![App Status](https://argocd.baloise.dev/api/badge?name=katafygio)](https://argocd.baloise.dev/applications/katafygio)|
 | Guacamole         |[Guacamole](guacamole)          |[![App Status](https://argocd.baloise.dev/api/badge?name=guacamole)](https://argocd.baloise.dev/applications/guacamole)|
