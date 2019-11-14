@@ -85,17 +85,6 @@ applications:
     syncPolicy:
       automated:
         prune: true
-  - name: chartmuseum
-    enabled: false
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: chartmuseum
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: guacamole
     helm:
       valueFiles:
