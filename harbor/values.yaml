@@ -986,6 +986,11 @@ harbor:
     slave:
       persistence:
         enabled: true
+    securityContext:
+      enabled: true
+      fsGroup: 1000090000
+      runAsUser: 1000090000    
+
 
   ## If the Redis included in the chart is disabled, Harbor will use below
   ## Redis parameters to connect to an external Redis server.
