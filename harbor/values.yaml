@@ -392,8 +392,8 @@ harbor:
   ##
   securityContext:
     enabled: true
-    fsGroup: '1000090000'
-    runAsUser: '1000090000'
+    fsGroup: "1000090000"
+    runAsUser: "1000090000"
 
   # The persistence is enabled by default and a default StorageClass
   # is needed in the k8s cluster to provision volumes dynamicly.
@@ -988,8 +988,8 @@ harbor:
         enabled: true
     securityContext:
       enabled: true
-      fsGroup: '1000090000'
-      runAsUser: '1000090000'
+      fsGroup: 1000090000
+      runAsUser: 1000090000
 
 
   ## If the Redis included in the chart is disabled, Harbor will use below
@@ -1023,8 +1023,8 @@ harbor:
     postgresqlPassword: not-secure-database-password
     securityContext:
       enabled: true
-      fsGroup: '1000090000'
-      runAsUser: '1000090000'   
+      fsGroup: "1000090000"
+      runAsUser: "1000090000"   
     replication:
       enabled: true
     persistence:
