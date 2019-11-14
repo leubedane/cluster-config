@@ -558,7 +558,7 @@ harbor:
     ## When setting up Harbor behind another reverse proxy, such as a nginx instance, set this value to true
     ## if the reverse proxy already provides the 'X-Forwarded-Proto' header field.
     ## This is, for example, the case for the OpenShift HAProxy router.
-    behindReverseProxy: false
+    behindReverseProxy: true
     ## Configure extra options for liveness and readiness probes
     ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
     ##
