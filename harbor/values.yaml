@@ -448,7 +448,7 @@ harbor:
       # Refer to
       # https://github.com/docker/distribution/blob/master/docs/configuration.md#redirect
       # for the detail.
-      disableredirect: false
+      disableredirect: true
       # Specify the type of storage: "filesystem", "azure", "gcs", "s3", "swift",
       # "oss" and fill the information needed in the corresponding section. The type
       # must be "filesystem" if you want to use persistent volumes for registry
