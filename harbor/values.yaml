@@ -1016,6 +1016,10 @@ harbor:
     #   tag:
     postgresqlUsername: postgres
     postgresqlPassword: not-secure-database-password
+    securityContext:
+      enabled: true
+      fsGroup: 1000090000
+      runAsUser: 1000090000    
     replication:
       enabled: true
     persistence:
