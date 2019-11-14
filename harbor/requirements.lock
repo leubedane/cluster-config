@@ -1,0 +1,6 @@
+dependencies:
+- name: harbor
+  repository: https://charts.bitnami.com
+  version: 3.0.2
+digest: sha256:a7d8ae42ce958efc0e65f188863b938d0fa2e941ac252aa9a9767a9af42ae5a9
+generated: "2019-11-14T19:43:47.1556961+01:00"

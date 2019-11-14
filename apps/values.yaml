@@ -126,3 +126,13 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: harbor
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: harbor
+    repoURL: https://github.com/baloise-incubator/cluster-config.git
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
