@@ -115,6 +115,19 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: kloud-assistant
+    project: joachimprinzbach
+    admins:
+      - joachimprinzbach
+    helm:
+      valueFiles:
+        - "values.yaml"
+    path: kloud-assistant
+    repoURL: https://github.com/joachimprinzbach/kloud-assistant-deployment
+    targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
   - name: harbor
     helm:
       valueFiles:
