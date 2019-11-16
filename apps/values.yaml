@@ -138,3 +138,16 @@ applications:
     syncPolicy:
       automated:
         prune: true
+  - name: tournament-manager
+      project: leubedane
+      admins:
+        - leubedane
+      helm:
+        valueFiles:
+          - "values.yaml"
+      path: tournament-manager
+      repoURL: https://github.com/leubedane/registration-deployment.git
+      targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
