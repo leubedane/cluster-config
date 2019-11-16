@@ -21,4 +21,16 @@ spec:
   - https://github.com/niiku/deployment-config.git
   destinations:
   - namespace: '*'
-    server: https://kubernetes.default.svc  
+    server: https://kubernetes.default.svc
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: joachimprinzbach
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/joachimprinzbach/kloud-assistant-deployment
+  destinations:
+    - namespace: 'kloud-assistant'
+      server: https://kubernetes.default.svc
