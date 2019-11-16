@@ -24,7 +24,7 @@ metadata:
   namespace: {{ default .name .namespace | quote }}
 roleRef:
   name: admin
-  kind: Role
+  kind: ClusterRole
   apiGroup: rbac.authorization.k8s.io
 subjects:
 {{- range .admins }}
