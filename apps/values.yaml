@@ -115,15 +115,15 @@ applications:
     syncPolicy:
       automated:
         prune: true
-  - name: kloud-assistant
-    project: joachimprinzbach
+  - name: argonaut
+    project: baloise-incubator
     admins:
       - joachimprinzbach
     helm:
       valueFiles:
         - "values.yaml"
-    path: kloud-assistant
-    repoURL: https://github.com/joachimprinzbach/kloud-assistant-deployment
+    path: argonaut
+    repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
     targetRevision: HEAD
     syncPolicy:
       automated:
