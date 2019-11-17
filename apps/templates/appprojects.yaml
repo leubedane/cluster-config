@@ -26,11 +26,11 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: joachimprinzbach
+  name: baloise-incubator
   namespace: argocd
 spec:
   sourceRepos:
-    - https://github.com/joachimprinzbach/kloud-assistant-deployment
+    - https://github.com/baloise-incubator/argonaut-deployment-configuration
   destinations:
-    - namespace: 'kloud-assistant'
+    - namespace: 'argonaut'
       server: https://kubernetes.default.svc
