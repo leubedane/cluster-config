@@ -15,49 +15,37 @@ applications:
     namespace: argocd
     noNamespaceCreation: true
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: argocd
-    namespace: argocd
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
-    nodeSelector: ""    
+    nodeSelector: ""
   - name: sealed-secrets
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: rook-ceph
     nodeSelector: ""
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: eclipse-che
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: strimzi
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: katafygio
     enabled: false
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: monocular
     enabled: false
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: guacamole
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: openshift-acme
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
-  - name: tournament-registration
-    project: leubedane
-    admins:
-      - leubedane
-    templateEngine: helm
-    repoURL: https://github.com/leubedane/registration-deployment.git
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
     repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
   - name: harbor
     templateEngine: helm
-    repoURL: https://github.com/baloise-incubator/cluster-config.git
   - name: tournament-manager
+    project: leubedane
+    admins:
+      - leubedane
+    templateEngine: helm
+    repoURL: https://github.com/leubedane/registration-deployment.git
+  - name: tournament-registration
     project: leubedane
     admins:
       - leubedane

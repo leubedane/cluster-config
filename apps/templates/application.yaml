@@ -24,7 +24,7 @@ spec:
 {{- end }}
 {{- end }}
     path: {{ default .name .path }}
-    repoURL: {{ .repoURL }}
+    repoURL: {{ default "https://github.com/baloise-incubator/cluster-config.git" .repoURL }}
     targetRevision: {{ default "HEAD" .targetRevision }}
   syncPolicy:
     automated:
