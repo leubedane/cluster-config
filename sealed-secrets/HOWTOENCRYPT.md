@@ -17,13 +17,13 @@ kubeseal --controller-name=sealed-secrets \
 kubectl create secret generic secret-example \
 --from-literal=password=$ECRET! \
 --dry-run \
--oyaml > secret-example.json
+-oyaml > secret-example.yaml
 ```
 
 ```
 kubeseal --cert ~/kubeseal/kubeseal.crt \
 --namespace=<target-namespace> -oyaml \
-< secret-example.json > namespaced-sealed-secret-example.json
+< secret-example.yaml > namespaced-sealed-secret-example.yaml
 ```
 
 ## Create and encrypt pull secret
@@ -32,12 +32,12 @@ kubectl create secret docker-registry harbor-pull-secret \
 --docker-server=harbor.apps.baloise.dev \
 --docker-username=admin \
 --docker-password=Harbor12345 \
---dry-run -oyaml > pull-secret-example.json
+--dry-run -oyaml > pull-secret-example.yaml
 ```
 ```
 kubeseal --cert ~/kubeseal/kubeseal.crt \
 --namespace=<target-namespace> -oyaml \
-< pull-secret-example.json > sealed-pull-secret-example.json
+< pull-secret-example.yaml > sealed-pull-secret-example.yaml
 ```
 ### Add pull secret to ServiceAccount
 ```
