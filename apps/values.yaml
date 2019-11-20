@@ -155,6 +155,7 @@ applications:
     project: table-tennis-tournament
     path: namespaces
     noNamespaceCreation: true
+    namespace: argocd
     helm:
       valueFiles:
         - "values.yaml"
