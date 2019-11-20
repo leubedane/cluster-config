@@ -152,6 +152,7 @@ applications:
       automated:
         prune: true
   - name: table-tennis-tournament
+    project: table-tennis-tournament
     path: namespaces
     noNamespaceCreation: true
     namespace: argocd
