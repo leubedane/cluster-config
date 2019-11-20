@@ -17,12 +17,10 @@ applications:
     templateEngine: helm
   - name: argocd
     nodeSelector: ""
-  - name: sealed-secrets
-    templateEngine: helm
-  - name: rook-ceph
-    nodeSelector: ""
   - name: eclipse-che
-  - name: strimzi
+  - name: guacamole
+    templateEngine: helm
+  - name: harbor
     templateEngine: helm
   - name: katafygio
     enabled: false
@@ -30,15 +28,17 @@ applications:
   - name: monocular
     enabled: false
     templateEngine: helm
-  - name: guacamole
-    templateEngine: helm
   - name: openshift-acme
+  - name: rook-ceph
+    nodeSelector: ""
+  - name: sealed-secrets
+    templateEngine: helm
+  - name: strimzi
+    templateEngine: helm
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
     repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
-  - name: harbor
-    templateEngine: helm
   - name: tournament-manager
     project: leubedane
     admins:
