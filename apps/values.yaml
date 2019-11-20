@@ -1,166 +1,72 @@
-argocdNamespace: argocd
 server: https://kubernetes.default.svc
 defaultProject: default
 requestor: admin@baloise.dev
+projects:
+  - name: leubedane
+  - name: niiku
+  - name: baloise-incubator
+  - name: table-tennis-tournament
+    clusterResourceWhitelist:
+      - group: '*'
+        kind: '*'
+
 applications:
   - name: apps
     namespace: argocd
     noNamespaceCreation: true
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: apps
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
   - name: argocd
     namespace: argocd
-    path: argocd
     repoURL: https://github.com/baloise-incubator/cluster-config.git
     nodeSelector: ""    
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
   - name: sealed-secrets
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: sealed-secrets
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
   - name: rook-ceph
-    path: rook-ceph
     nodeSelector: ""
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
   - name: eclipse-che
-    path: eclipse-che
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: strimzi
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: strimzi
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: katafygio
     enabled: false
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: katafygio
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: monocular
     enabled: false
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: monocular
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: guacamole
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: guacamole
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: openshift-acme
-    path: openshift-acme
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: tournament-registration
     project: leubedane
     admins:
       - leubedane
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: tournament-registration
+    templateEngine: helm
     repoURL: https://github.com/leubedane/registration-deployment.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: argonaut
     project: baloise-incubator
-    admins:
-      - joachimprinzbach
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: argonaut
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: harbor
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: harbor
+    templateEngine: helm
     repoURL: https://github.com/baloise-incubator/cluster-config.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: tournament-manager
     project: leubedane
     admins:
       - leubedane
-    helm:
-      valueFiles:
-        - "values.yaml"
-    path: tournament-manager
+    templateEngine: helm
     repoURL: https://github.com/leubedane/registration-deployment.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
   - name: table-tennis-tournament
     project: table-tennis-tournament
     path: namespaces
     noNamespaceCreation: true
     namespace: argocd
-    helm:
-      valueFiles:
-        - "values.yaml"
+    templateEngine: helm
     repoURL: https://github.com/table-tennis-tournament/deployment-configuration.git
-    targetRevision: HEAD
-    syncPolicy:
-      automated:
-        prune: true
