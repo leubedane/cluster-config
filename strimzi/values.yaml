@@ -1,6 +1,7 @@
   # Default values for strimzi-kafka-operator.
 strimzi-kafka-operator:
-  watchNamespaces: []
+  watchNamespaces:
+  - ssteps
 
 # Override the docker image repository used by all Strimzi images
   # imageRepositoryOverride: foobar
