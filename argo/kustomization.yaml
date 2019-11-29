@@ -4,8 +4,8 @@ kind: Kustomization
 bases:
   - github.com/argoproj/argo/manifests/cluster-install?ref=v2.4.2
 
-# resources:
-#   - base/argocd-ui-route.yaml
+resources:
+  - base/argo-ui-route.yaml
 #   - base/argocd-sealed-secret.json
 #   - base/default-appprojects.yaml
 
