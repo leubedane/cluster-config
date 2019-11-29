@@ -384,7 +384,7 @@ spec:
       command:
         - echo
       args:
-        - "hello world"
+        - "Hoi Nik xD"
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
