@@ -254,7 +254,10 @@ kind: Route
 metadata:
   name: tekton-dashboard
   namespace: tekton-pipelines
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
 spec:
+  host: tekton.apps.baloise.dev
   tls:
     insecureEdgeTerminationPolicy: Redirect
     termination: Reencrypt
