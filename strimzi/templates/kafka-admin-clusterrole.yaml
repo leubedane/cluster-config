@@ -1,0 +1,26 @@
+apiVersion: authorization.openshift.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+  name: kafka-admin
+rules:
+  - apiGroups:
+      - kafka.strimzi.io
+    attributeRestrictions: null
+    resources:
+      - kafkatopics
+      - kafkabridges
+      - kafkaconnects
+      - kafkaconnects2is
+      - kafkamirrormakers
+      - kafkas
+      - kafkatopics
+      - kafkausers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
