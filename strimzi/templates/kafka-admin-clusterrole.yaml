@@ -1,12 +1,17 @@
 apiVersion: authorization.openshift.io/v1
 kind: ClusterRole
 metadata:
-  annotations:
   name: kafka-admin
+  labels:
+    app: {{ template "strimzi.name" . }}
+    chart: {{ template "strimzi.chart" . }}
+    component: role
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  
 rules:
   - apiGroups:
       - kafka.strimzi.io
-    attributeRestrictions: null
     resources:
       - kafkatopics
       - kafkabridges
