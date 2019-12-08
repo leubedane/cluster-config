@@ -242,7 +242,7 @@ keycloak:
     ## OpenShift route configuration.
     ## ref: https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html
     route:
-      enabled: true
+      enabled: false
       path: /
 
       annotations: {}
