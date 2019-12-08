@@ -74,7 +74,7 @@ chartmuseum:
       # absolute url for .tgzs in index.yaml
       CHART_URL:
       # allow anonymous GET operations when auth is used
-      AUTH_ANONYMOUS_GET: false
+      AUTH_ANONYMOUS_GET: true
       # sets the base context path
       CONTEXT_PATH:
       # parallel scan limit for the repo indexer
@@ -107,9 +107,9 @@ chartmuseum:
     # Stores Enviromnt Variable to secret key name mappings
     existingSecretMappings:
       # username for basic http authentication
-      BASIC_AUTH_USER:
+      BASIC_AUTH_USER: BASIC_AUTH_USER
       # password for basic http authentication
-      BASIC_AUTH_PASS:
+      BASIC_AUTH_PASS: BASIC_AUTH_PASS
       # GCP service account json file
       GOOGLE_CREDENTIALS_JSON:
       # Redis requirepass server configuration
