@@ -35,6 +35,8 @@ applications:
     templateEngine: helm
   - name: strimzi
     templateEngine: helm
+  - name: chartmuseum
+    templateEngine: helm
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
