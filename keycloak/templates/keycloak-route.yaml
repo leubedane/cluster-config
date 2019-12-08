@@ -5,7 +5,7 @@ metadata:
     app: keycloak
   name: keycloak
 spec:
-  host: keycloak.baloise.dev
+  host: keycloak.apps.baloise.dev
   path: /
   port:
     targetPort: http
