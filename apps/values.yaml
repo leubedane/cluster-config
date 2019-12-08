@@ -37,6 +37,8 @@ applications:
     templateEngine: helm
   - name: chartmuseum
     templateEngine: helm
+  - name: keycloak
+    templateEngine: helm
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
