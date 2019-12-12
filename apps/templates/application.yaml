@@ -10,6 +10,10 @@ spec:
   destination:
     namespace: {{ default .name .namespace }}
     server: {{ $.Values.server }}
+{{- if .ignoreDifferences }}
+  ignoreDifferences:
+{{- toYaml .ignoreDifferences | nindent 4 }}
+{{- end}}
   project: {{ default $.Values.defaultProject .project }}
   source:
 {{- if .templateEngine }}
@@ -30,9 +34,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-{{- if .ignoreDifferences }}
-  ignoreDifferences:
-{{- toYaml .ignoreDifferences | nindent 4 -}}
-{{- end}}
 {{- end }}
 {{ end }}

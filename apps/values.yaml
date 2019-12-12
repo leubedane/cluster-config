@@ -73,12 +73,12 @@ applications:
       - group: admissionregistration.k8s.io
         kind: MutatingWebhookConfiguration
         jsonPointers:
-          - /spec/replicas
+          - /
       - group: rbac.authorization.k8s.io
         kind: ClusterRole
         jsonPointers:
-          - /spec/replicas
+          - /
       - group: rbac.authorization.k8s.io
         kind: ClusterRoleBinding
         jsonPointers:
-          - /spec/replicas
+          - /
