@@ -64,3 +64,8 @@ applications:
     repoURL: https://github.com/table-tennis-tournament/deployment-configuration.git
   - name: tekton-pipelines
   - name: argo 
+  - name: openshift-logging
+  - name: observability
+  - name: kiali-operator
+  - name: istio-operator
+  - name: istio-system
