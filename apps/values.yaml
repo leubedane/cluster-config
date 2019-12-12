@@ -67,6 +67,7 @@ applications:
   - name: tekton-pipelines
   - name: argo
   - name: bookinfo
+    enabled: false
   - name: openshift-logging
   - name: observability
   - name: kiali-operator
