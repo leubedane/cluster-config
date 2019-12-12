@@ -69,3 +69,10 @@ applications:
   - name: kiali-operator
   - name: istio-operator
   - name: istio-system
+    ignoreDifferences:
+      - group: admissionregistration.k8s.io
+        kind: MutatingWebhookConfiguration
+      - group: rbac.authorization.k8s.io
+        kind: ClusterRole
+      - group: rbac.authorization.k8s.io
+        kind: ClusterRoleBinding

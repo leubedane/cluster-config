@@ -30,5 +30,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
+{{- if .ignoreDifferences }}
+  ignoreDifferences:
+{{- toYaml .ignoreDifferences | nindent 4 -}}
+{{- end}}
 {{- end }}
 {{ end }}
