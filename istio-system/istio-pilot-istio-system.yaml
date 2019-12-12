@@ -2,18 +2,12 @@ apiVersion: authorization.openshift.io/v1
 kind: ClusterRole
 metadata:
   labels:
-    app: pilot
     app.kubernetes.io/component: pilot
     app.kubernetes.io/instance: istio-system
     app.kubernetes.io/managed-by: maistra-istio-operator
     app.kubernetes.io/name: pilot
     app.kubernetes.io/part-of: istio
     app.kubernetes.io/version: "1"
-    chart: pilot
-    heritage: Tiller
-    maistra-version: 1.0.0
-    maistra.io/owner: istio-system
-    release: istio
   name: istio-pilot-istio-system
 rules:
 - apiGroups:

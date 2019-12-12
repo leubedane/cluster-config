@@ -2,18 +2,12 @@ apiVersion: authorization.openshift.io/v1
 kind: ClusterRole
 metadata:
   labels:
-    app: mixer
     app.kubernetes.io/component: mixer
     app.kubernetes.io/instance: istio-system
     app.kubernetes.io/managed-by: maistra-istio-operator
     app.kubernetes.io/name: mixer
     app.kubernetes.io/part-of: istio
     app.kubernetes.io/version: "1"
-    chart: mixer
-    heritage: Tiller
-    maistra-version: 1.0.0
-    maistra.io/owner: istio-system
-    release: istio
   name: istio-mixer-istio-system
 rules:
 - apiGroups:
