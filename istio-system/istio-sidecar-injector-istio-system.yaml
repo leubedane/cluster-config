@@ -1,0 +1,57 @@
+apiVersion: authorization.openshift.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app: sidecarInjectorWebhook
+    app.kubernetes.io/component: sidecarInjectorWebhook
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: sidecarInjectorWebhook
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: "1"
+    chart: sidecarInjectorWebhook
+    heritage: Tiller
+    istio: sidecar-injector
+    maistra-version: 1.0.0
+    maistra.io/owner: istio-system
+    release: istio
+  name: istio-sidecar-injector-istio-system
+rules:
+- apiGroups:
+  - ""
+  attributeRestrictions: null
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - extensions
+  - apps
+  attributeRestrictions: null
+  resourceNames:
+  - istio-sidecar-injector
+  resources:
+  - deployments
+  verbs:
+  - get
+- apiGroups:
+  - extensions
+  attributeRestrictions: null
+  resourceNames:
+  - istio-sidecar-injector
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ""
+  attributeRestrictions: null
+  resources:
+  - secrets
+  verbs:
+  - create
+  - get
+  - list
+  - watch

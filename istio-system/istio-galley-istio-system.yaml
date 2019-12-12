@@ -1,0 +1,120 @@
+apiVersion: authorization.openshift.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app: galley
+    app.kubernetes.io/component: galley
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: galley
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: "1"
+    chart: galley
+    heritage: Tiller
+    maistra-version: 1.0.0
+    maistra.io/owner: istio-system
+    release: istio
+  name: istio-galley-istio-system
+rules:
+- apiGroups:
+  - maistra.io
+  attributeRestrictions: null
+  resources:
+  - servicemeshmemberrolls
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - config.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - networking.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - authentication.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - rbac.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - extensions
+  - apps
+  attributeRestrictions: null
+  resourceNames:
+  - istio-galley
+  resources:
+  - deployments
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  attributeRestrictions: null
+  resources:
+  - endpoints
+  - pods
+  - services
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - extensions
+  attributeRestrictions: null
+  resources:
+  - ingresses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - extensions
+  attributeRestrictions: null
+  resourceNames:
+  - istio-galley
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - authentication.maistra.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - rbac.maistra.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch

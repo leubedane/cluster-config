@@ -1,0 +1,230 @@
+apiVersion: authorization.openshift.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/instance: istio-operator
+  name: istio-operator
+rules:
+- apiGroups:
+  - ""
+  attributeRestrictions: null
+  resources:
+  - configmaps
+  - endpoints
+  - events
+  - namespaces
+  - persistentvolumeclaims
+  - pods
+  - replicationcontrollers
+  - secrets
+  - serviceaccounts
+  - services
+  verbs:
+  - '*'
+- apiGroups:
+  - apps
+  - extensions
+  attributeRestrictions: null
+  resources:
+  - daemonsets
+  - deployments
+  - deployments/finalizers
+  - ingresses
+  - ingresses/status
+  - replicasets
+  - statefulsets
+  verbs:
+  - '*'
+- apiGroups:
+  - autoscaling
+  attributeRestrictions: null
+  resources:
+  - horizontalpodautoscalers
+  verbs:
+  - '*'
+- apiGroups:
+  - policy
+  attributeRestrictions: null
+  resources:
+  - poddisruptionbudgets
+  verbs:
+  - '*'
+- apiGroups:
+  - admissionregistration.k8s.io
+  attributeRestrictions: null
+  resources:
+  - mutatingwebhookconfigurations
+  - validatingwebhookconfigurations
+  verbs:
+  - '*'
+- apiGroups:
+  - apiextensions.k8s.io
+  attributeRestrictions: null
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - '*'
+- apiGroups:
+  - certmanager.k8s.io
+  attributeRestrictions: null
+  resources:
+  - clusterissuers
+  verbs:
+  - '*'
+- apiGroups:
+  - networking.k8s.io
+  attributeRestrictions: null
+  resources:
+  - networkpolicies
+  verbs:
+  - '*'
+- apiGroups:
+  - rbac.authorization.k8s.io
+  attributeRestrictions: null
+  resources:
+  - clusterrolebindings
+  - clusterroles
+  - rolebindings
+  - roles
+  verbs:
+  - '*'
+- apiGroups:
+  - authentication.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - config.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - networking.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - rbac.istio.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - jaegertracing.io
+  attributeRestrictions: null
+  resources:
+  - jaegers
+  verbs:
+  - '*'
+- apiGroups:
+  - kiali.io
+  attributeRestrictions: null
+  resources:
+  - kialis
+  verbs:
+  - '*'
+- apiGroups:
+  - maistra.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - authentication.maistra.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - rbac.maistra.io
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - route.openshift.io
+  attributeRestrictions: null
+  resources:
+  - routes
+  - routes/custom-host
+  verbs:
+  - '*'
+- apiGroups:
+  - authorization.k8s.io
+  attributeRestrictions: null
+  resources:
+  - subjectaccessreviews
+  verbs:
+  - create
+- apiGroups:
+  - network.openshift.io
+  attributeRestrictions: null
+  resources:
+  - clusternetworks
+  verbs:
+  - get
+- apiGroups:
+  - network.openshift.io
+  attributeRestrictions: null
+  resources:
+  - netnamespaces
+  verbs:
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - k8s.cni.cncf.io
+  attributeRestrictions: null
+  resources:
+  - network-attachment-definitions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - watch
+- apiGroups:
+  - security.openshift.io
+  attributeRestrictions: null
+  resourceNames:
+  - privileged
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - use
+- apiGroups:
+  - ""
+  attributeRestrictions: null
+  resources:
+  - nodes
+  - nodes/proxy
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - authentication.k8s.io
+  attributeRestrictions: null
+  resources:
+  - tokenreviews
+  verbs:
+  - create
+- apiGroups: null
+  attributeRestrictions: null
+  nonResourceURLs:
+  - /metrics
+  resources: []
+  verbs:
+  - get
