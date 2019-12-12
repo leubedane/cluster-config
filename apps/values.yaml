@@ -18,10 +18,12 @@ applications:
   - name: argocd
     nodeSelector: ""
   - name: eclipse-che
+    enabled: false
   - name: guacamole
     templateEngine: helm
   - name: harbor
     templateEngine: helm
+    enabled: false
   - name: katafygio
     enabled: false
     templateEngine: helm
