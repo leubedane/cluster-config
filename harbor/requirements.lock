@@ -1,9 +1,6 @@
 dependencies:
-- name: postgresql
-  repository: https://charts.bitnami.com/bitnami
-  version: 7.1.0
-- name: redis
-  repository: https://charts.bitnami.com/bitnami
-  version: 9.5.4
-digest: sha256:5fdd20635c94b258d24a4d774e33d66e0b44006191d37e68ca6ad3fdcadecb14
-generated: "2019-11-14T20:41:42.3140549+01:00"
+- name: harbor
+  repository: https://helm.goharbor.io
+  version: 1.2.0
+digest: sha256:bf806ae7a941aa8e57e112aadd5a4ada3d9c0629bf426eb1ac1acbaf8b3e1905
+generated: "2019-12-13T23:44:46.8725882+01:00"
