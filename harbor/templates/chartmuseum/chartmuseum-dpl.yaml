@@ -8,6 +8,8 @@ metadata:
     component: chartmuseum
 spec:
   replicas: {{ .Values.chartmuseum.replicas }}
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
 {{ include "harbor.matchLabels" . | indent 6 }}
