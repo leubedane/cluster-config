@@ -80,3 +80,6 @@ spec:
   # a list of namespaces that should be joined into the service mesh
   # for example, to add the bookinfo namespace
   - bookinfo
+  - harbor
+  - concat-service
+  - greeting-service
