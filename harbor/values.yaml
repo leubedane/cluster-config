@@ -234,7 +234,7 @@ persistence:
       #chunksize: 10M
       #rootdirectory: rootdirectory
 
-imagePullPolicy: IfNotPresent
+imagePullPolicy: Always
 
 # Use this set to assign a list of default pullSecrets
 imagePullSecrets:
