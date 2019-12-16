@@ -44,6 +44,10 @@ applications:
     project: baloise-incubator
     templateEngine: helm
     repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
+  - name: micro-istio
+    project: joachimprinzbach
+    templateEngine: helm
+    repoURL: https://github.com/joachimprinzbach/micro-istio-deployment
   - name: tournament-manager
     project: leubedane
     admins:
