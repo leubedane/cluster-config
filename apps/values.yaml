@@ -72,6 +72,7 @@ applications:
   - name: kiali-operator
   - name: istio-operator
   - name: istio-system
+    enabled: false
     ignoreDifferences:
       - group: admissionregistration.k8s.io
         kind: MutatingWebhookConfiguration
