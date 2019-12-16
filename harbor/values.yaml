@@ -282,7 +282,7 @@ nginx:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
 
 portal:
   image:
@@ -298,7 +298,7 @@ portal:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
 
 core:
   image:
@@ -347,7 +347,7 @@ jobservice:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
   # Secret is used when job service communicates with other components.
   # If a secret key is not specified, Helm will generate one.
   # Must be a string of 16 chars.
@@ -378,7 +378,7 @@ registry:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
   # Secret is used to secure the upload state from client
   # and registry storage backend.
   # See: https://github.com/docker/distribution/blob/master/docs/configuration.md#http
@@ -416,7 +416,7 @@ chartmuseum:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
 
 clair:
   enabled: true
@@ -445,7 +445,7 @@ clair:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
 
 notary:
   enabled: false
@@ -472,7 +472,7 @@ notary:
   affinity: {}
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
   # Fill the name of a kubernetes secret if you want to use your own
   # TLS certificate authority, certificate and private key for notary
   # communications.
@@ -528,7 +528,7 @@ database:
   maxOpenConns: 100
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
 
 redis:
   # if external Redis is used, set "type" to "external"
@@ -558,4 +558,4 @@ redis:
     password: ""
   ## Additional deployment annotations
   podAnnotations:
-    sidecar.istio.io/inject: true
+    sidecar.istio.io/inject: "true"
