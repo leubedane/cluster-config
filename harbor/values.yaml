@@ -281,7 +281,8 @@ nginx:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
 
 portal:
   image:
@@ -296,7 +297,8 @@ portal:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
 
 core:
   image:
@@ -314,7 +316,8 @@ core:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
   # Secret is used when core server communicates with other components.
   # If a secret key is not specified, Helm will generate one.
   # Must be a string of 16 chars.
@@ -343,7 +346,8 @@ jobservice:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
   # Secret is used when job service communicates with other components.
   # If a secret key is not specified, Helm will generate one.
   # Must be a string of 16 chars.
@@ -373,7 +377,8 @@ registry:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
   # Secret is used to secure the upload state from client
   # and registry storage backend.
   # See: https://github.com/docker/distribution/blob/master/docs/configuration.md#http
@@ -410,7 +415,8 @@ chartmuseum:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
 
 clair:
   enabled: true
@@ -438,7 +444,8 @@ clair:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
 
 notary:
   enabled: false
@@ -464,7 +471,8 @@ notary:
   tolerations: []
   affinity: {}
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
   # Fill the name of a kubernetes secret if you want to use your own
   # TLS certificate authority, certificate and private key for notary
   # communications.
@@ -519,7 +527,8 @@ database:
   # Note: the default number of connections is 100 for postgre.
   maxOpenConns: 100
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
 
 redis:
   # if external Redis is used, set "type" to "external"
@@ -548,4 +557,5 @@ redis:
     clairAdapterIndex: "4"
     password: ""
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations:
+    sidecar.istio.io/inject: true
