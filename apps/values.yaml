@@ -4,6 +4,7 @@ requestor: admin@baloise.dev
 projects:
   - name: leubedane
   - name: niiku
+  - name: joachimprinzbach
   - name: baloise-incubator
   - name: table-tennis-tournament
     clusterResourceWhitelist:
