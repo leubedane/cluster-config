@@ -4,3 +4,8 @@ metadata:
   name: argocd-repo-server
 spec:
   replicas: 5
+  template:
+    spec:
+      containers:
+        - image: 'harbor.baloise.dev/library/argocd:latest'
+          name: argocd-repo-server
