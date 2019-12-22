@@ -48,7 +48,7 @@ applications:
   - name: greeting-service
     project: joachimprinzbach
     templateEngine: helm
-    repoURL: https://github.com/joachimprinzbach/micro-istio-deployment#nik
+    repoURL: https://github.com/joachimprinzbach/micro-istio-deployment
   - name: concat-service
     project: joachimprinzbach
     templateEngine: helm
