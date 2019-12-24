@@ -45,11 +45,7 @@ applications:
     project: baloise-incubator
     templateEngine: helm
     repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
-  - name: greeting-service
-    project: joachimprinzbach
-    templateEngine: helm
-    repoURL: https://github.com/joachimprinzbach/micro-istio-deployment
-  - name: concat-service
+  - name: example-app
     project: joachimprinzbach
     templateEngine: helm
     repoURL: https://github.com/joachimprinzbach/micro-istio-deployment
