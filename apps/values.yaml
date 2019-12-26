@@ -10,6 +10,7 @@ projects:
     clusterResourceWhitelist:
       - group: '*'
         kind: '*'
+  - name: christiansiegel
 
 applications:
   - name: apps
@@ -91,3 +92,9 @@ applications:
         kind: ClusterRoleBinding
         jsonPointers:
           - /
+  - name: playground
+    project: christiansiegel
+    admins:
+      - christiansiegel
+    templateEngine: helm
+    repoURL: https://github.com/christiansiegel/baloise-incubator-playground-deployment.git
