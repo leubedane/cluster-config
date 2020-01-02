@@ -27,6 +27,8 @@ The following deployments are currently in the cluster, managed by ArgoCD:
 Every app needs to be referenced in the [values.yaml in the apps folder](apps/values.yaml).
 See the [apps README.md](apps/README.md) for details.
 
+### Secrets Management
+Secrets like passwords or API tokens can be managed using the Kubernetes [secrets](https://kubernetes.io/docs/concepts/configuration/secret/) resource type. However, it is not a good idea to store those secrets in the repository since they are only base64 encoded. We are using [Bitnami Sealed Secrets](sealed-secrets) to encrypt those secrets.
 
 ## Argo CD General Setup
 In order to start with the configuration and for this config repository to have any impact, we need to get Argo CD setup first.
