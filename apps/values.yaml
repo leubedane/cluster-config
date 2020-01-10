@@ -25,6 +25,7 @@ applications:
     templateEngine: helm
   - name: harbor
     templateEngine: helm
+    enabled: false
   - name: katafygio
     enabled: false
     templateEngine: helm
