@@ -7,5 +7,5 @@ spec:
   template:
     spec:
       containers:
-        - image: 'harbor.baloise.dev/library/argocd:latest'
+        - image: 'niiku/argocd:latest'
           name: argocd-repo-server
