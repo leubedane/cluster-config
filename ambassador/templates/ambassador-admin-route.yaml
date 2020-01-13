@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
+  name: ambassador-admin
+spec:
+  host: ambassador-admin-ambassador.apps.baloise.dev
+  port:
+    targetPort: admin
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: ambassador-admin
+    weight: 100
+  wildcardPolicy: None
