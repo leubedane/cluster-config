@@ -45,6 +45,7 @@ applications:
     templateEngine: helm
   - name: kong
   - name: 3scale
+    enabled: false
   - name: ambassador
     templateEngine: helm
   - name: argonaut
