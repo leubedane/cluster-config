@@ -28,6 +28,8 @@ data:
       name: strimzi
     - url: http://storage.googleapis.com/kubernetes-charts-incubator
       name: incubator
+    - url: https://kubernetes-charts.storage.googleapis.com/
+      name: stable
     - url: https://charts.bitnami.com/bitnami
       name: bitnami
     - url: https://charts.rook.io/release
