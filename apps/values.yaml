@@ -43,6 +43,8 @@ applications:
     templateEngine: helm
   - name: keycloak
     templateEngine: helm
+  - name: kong
+    templateEngine: helm
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
