@@ -44,7 +44,6 @@ applications:
   - name: keycloak
     templateEngine: helm
   - name: kong
-    templateEngine: helm
   - name: ambassador
     templateEngine: helm
   - name: argonaut
