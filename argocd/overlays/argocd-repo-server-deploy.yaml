@@ -4,8 +4,8 @@ metadata:
   name: argocd-repo-server
 spec:
   replicas: 4
-  template:
-    spec:
-      containers:
-        - image: 'niiku/argocd:latest'
-          name: argocd-repo-server
+#  template:
+#    spec:
+#      containers:
+#        - image: 'niiku/argocd:latest'
+#          name: argocd-repo-server
