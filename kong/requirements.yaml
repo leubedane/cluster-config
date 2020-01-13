@@ -1,5 +1,5 @@
 dependencies:
-- name: ambassador
+- name: kong
   version: 0.36.4
   appVersion: 1.4
   repository: https://kubernetes-charts.storage.googleapis.com/
