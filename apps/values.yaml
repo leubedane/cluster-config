@@ -44,10 +44,12 @@ applications:
   - name: keycloak
     templateEngine: helm
   - name: kong
+    enabled: false  
   - name: 3scale
-    enabled: false
+    enabled: false    
   - name: ambassador
     templateEngine: helm
+    enabled: false    
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
@@ -76,7 +78,9 @@ applications:
     templateEngine: helm
     repoURL: https://github.com/table-tennis-tournament/deployment-configuration.git
   - name: tekton-pipelines
+    enabled: false  
   - name: argo
+    enabled: false  
   - name: bookinfo
     enabled: false
   - name: openshift-logging
