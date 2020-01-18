@@ -18,7 +18,6 @@ applications:
     noNamespaceCreation: true
     templateEngine: helm
   - name: argocd
-    nodeSelector: ""
   - name: eclipse-che
     enabled: false
   - name: guacamole
