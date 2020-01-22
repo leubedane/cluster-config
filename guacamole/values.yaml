@@ -17,4 +17,4 @@ mysql:
     readinessProbe:
       initialDelaySeconds: 120
     livenessProbe:
-      initialDelaySeconds: 180
+      initialDelaySeconds: 600
