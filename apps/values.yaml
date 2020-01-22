@@ -82,8 +82,8 @@ applications:
     enabled: false  
 #  - name: bookinfo
 #    enabled: false
-  - name: openshift-logging
-  - name: observability
+#  - name: openshift-logging
+#  - name: observability
 #  - name: kiali-operator
 #  - name: istio-operator
 #  - name: istio-system
