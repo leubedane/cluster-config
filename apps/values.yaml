@@ -7,30 +7,18 @@ projects:
   - name: joachimprinzbach
   - name: baloise-incubator
   - name: table-tennis-tournament
+  - name: christiansiegel
     clusterResourceWhitelist:
       - group: '*'
         kind: '*'
-  - name: christiansiegel
-
 applications:
   - name: apps
     namespace: argocd
     noNamespaceCreation: true
     templateEngine: helm
   - name: argocd
-  - name: eclipse-che
-    enabled: false
   - name: guacamole
     templateEngine: helm
-  - name: harbor
-    templateEngine: helm
-    enabled: false
-#  - name: katafygio
-#    enabled: false
-#    templateEngine: helm
-#  - name: monocular
-#    enabled: false
-#    templateEngine: helm
   - name: openshift-acme
   - name: rook-ceph
     nodeSelector: ""
@@ -42,21 +30,10 @@ applications:
     templateEngine: helm
   - name: keycloak
     templateEngine: helm
-#  - name: kong
-#    enabled: false
-#  - name: 3scale
-#    enabled: false
-#  - name: ambassador
-#    templateEngine: helm
-#    enabled: false
   - name: argonaut
     project: baloise-incubator
     templateEngine: helm
     repoURL: https://github.com/baloise-incubator/argonaut-deployment-configuration
-#  - name: example-app
-#    project: joachimprinzbach
-#    templateEngine: helm
-#    repoURL: https://github.com/joachimprinzbach/micro-istio-deployment
   - name: tournament-manager
     project: leubedane
     admins:
@@ -76,31 +53,6 @@ applications:
     namespace: argocd
     templateEngine: helm
     repoURL: https://github.com/table-tennis-tournament/deployment-configuration.git
-  - name: tekton-pipelines
-    enabled: false  
-  - name: argo
-    enabled: false  
-#  - name: bookinfo
-#    enabled: false
-#  - name: openshift-logging
-#  - name: observability
-#  - name: kiali-operator
-#  - name: istio-operator
-#  - name: istio-system
-#    enabled: false
-#    ignoreDifferences:
-#      - group: admissionregistration.k8s.io
-#        kind: MutatingWebhookConfiguration
-#        jsonPointers:
-#          - /
-#      - group: rbac.authorization.k8s.io
-#        kind: ClusterRole
-#        jsonPointers:
-#          - /
-#      - group: rbac.authorization.k8s.io
-#        kind: ClusterRoleBinding
-#        jsonPointers:
-#          - /
   - name: playground
     project: christiansiegel
     admins:

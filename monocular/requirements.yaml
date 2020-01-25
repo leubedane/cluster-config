@@ -1,4 +1,0 @@
-dependencies:
-- name: monocular
-  version: 1.4.13
-  repository: https://helm.github.io/monocular
